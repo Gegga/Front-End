@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #17202A;
+}
+
+.Header {
+    width: 100%;
+    max-width: 1440px;
+    padding: 20px 15px;
+    margin: 0 auto;
+}
+
+.H_Cont {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.HC-Brand a {
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.HC_List {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.HCL-Link a {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+.HC-Links {
+    width: 280px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HC-Links a {
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.HC-Links a:nth-child(1) {
+    color: white;
+    border: 2px solid #58D68D;
+}
+
+.HC-Links a:nth-child(2) {
+    color: #17202A;
+    background: #58D68D;
+}
+
+.H-MenuList {
+    position: relative;
+    width: 50px;
+    height: 45px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.H-MenuList div {
+    transition: 0.1s;
+    width: 100%;
+    height: 8px;
+    background: white;
+    border-radius: 50px;
+}
+
+.H-MenuList.Active {
+    justify-content: center;
+}
+
+.H-MenuList.Active div {
+    position: absolute;
+}
+
+.H-MenuList.Active div:nth-child(1) {
+    transform: rotateZ(45deg);
+}
+.H-MenuList.Active div:nth-child(2) {
+    width: 0;
+    height: 0;
+}
+.H-MenuList.Active div:nth-child(3) {
+    transform: rotateZ(-45deg);
+}
+
+.H_DropList {
+    display: none;
+}
+
+.H_DropList.Active {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 20px 20px 50px;
+    background: #1C2833;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.HD_Content {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.HDC-Link {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.HDC-Links {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.HDC-Links a {
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+} 
+
+.HDC-Links a:nth-child(1) {
+    color: white;
+    border: 2px solid #58D68D;
+} 
+
+.HDC-Links a:nth-child(2) {
+    color: #17202A;
+    background: #58D68D;
+} 
+
+@media (max-width: 900px) {
+    .HC_List, .HC-Links {
+        display: none;
+    }
+    .H-MenuList {
+        display: flex;
+    }
+}
+
+@media (min-width: 900px) {
+    .H_DropList.Active {
+        display: none;
+    }
+}
